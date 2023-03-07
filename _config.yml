@@ -98,17 +98,6 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: brewski
-theme_config:
-  logo:
-  google_analytics: UA-XXXXXXXX-X
-  copyright:
-    since: 2023
-    name: zhangr4
-    url: https://zhangr4.github.io
-  menu:
-    Home: /
-    About: /about
-    GitHub: https://github.com/zhangr4
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
