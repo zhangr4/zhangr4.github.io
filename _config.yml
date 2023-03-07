@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Zhangr's Blog
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: Zhangr4
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://zhangr4.github.io/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -97,7 +97,19 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: brewski
+theme_config:
+  logo:
+  google_analytics: UA-XXXXXXXX-X
+  copyright:
+    since: 2016
+    name: zhangr4
+    url: https://zhangr4.github.io
+  menu:
+    Home: /
+    About: /about
+    GitHub: https://github.com/zhangr4
+    RSS: 
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
