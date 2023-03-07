@@ -102,14 +102,13 @@ theme_config:
   logo:
   google_analytics: UA-XXXXXXXX-X
   copyright:
-    since: 2016
+    since: 2023
     name: zhangr4
     url: https://zhangr4.github.io
   menu:
     Home: /
     About: /about
     GitHub: https://github.com/zhangr4
-    RSS: 
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
