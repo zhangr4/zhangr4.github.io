@@ -48,8 +48,8 @@ jobs:
           npm run docs:build
           touch .vitepress/dist/.nojekyll
           
-      - name: Copy the Readmes
-        run: cp favicons -r .vitepress/dist
+      - name: Copy favicons
+        run: cp favicons -r .vitepress/dist 
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
