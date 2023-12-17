@@ -34,7 +34,7 @@ jobs:
           fetch-depth: 0 # Not needed if lastUpdated is not enabled
       - name: Setup Node
         uses: pnpm/action-setup@v2
-         with:
+        with:
           version: 18
       - name: Setup Pages
         uses: actions/configure-pages@v3
