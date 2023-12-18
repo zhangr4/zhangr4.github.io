@@ -47,11 +47,6 @@ jobs:
         run: |
           npm run docs:build
           touch .vitepress/dist/.nojekyll
-          
-      - name: Copy favicons
-        run: | 
-          cp favicons -r .vitepress/dist
-          find .vitepress/dist/ -type d -name 'favicons'
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
