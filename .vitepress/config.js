@@ -2,8 +2,8 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Zhangr4.github.io",
-  description: "Under Construction",
+  title: "Personal Profile",
+  text: "zhangr4",
   head: [
     ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/favicons/apple-touch-icon.png"}],
     ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicons/favicon-32x32.png"}],
@@ -24,18 +24,18 @@ export default defineConfig({
     ],
   ],
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
       // { text: "Examples", link: "/markdown-examples" },
       { text: "About Me", link: "/about-me" },
     ],
-
+    search: {
+      provider: "local",
+    },
     sidebar: [
       {
         text: "All blogs",
         items: [
-          // { text: "About Me", link: "/about-me" },
           { text: "Use WebView2 In Console Application", link: "Blogs/use-webview2-in-console-application"}
         ],
       },
