@@ -1,9 +1,8 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: zhangr4.github.io
+  name: zhangr4
   text: Happy coding
   image:
     src: /profile.png
