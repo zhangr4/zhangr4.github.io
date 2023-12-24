@@ -4,12 +4,20 @@ layout: home
 
 hero:
   name: zhangr4.github.io
-  text: Blogs
+  text: Happy coding
   image:
     src: /profile.png
-    alt: VitePress
+    alt: profile
   actions:
     - theme: brand
-      text: Get Started
-    - theme: alt
       text: View on GitHub
+      link: https://github.com/zhangr4
+
+features:
+  - icon: 🌐
+    title: Blogs Content
+    link: /content
+  - icon: 👨‍💼
+    title: About me
+    link: /about-me
+---

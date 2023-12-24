@@ -5,6 +5,8 @@ taxonomies:
   - tags: ["C#", "WebView2", "Console Application"]
 ---
 
+# Use WebView2 In Console Application
+
 ## What is WebView2
 
 Check out the [introduction of WebView2](https://learn.microsoft.com/en-us/microsoft-edge/webview2/)
