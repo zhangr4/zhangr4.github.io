@@ -3,31 +3,21 @@
 layout: home
 
 hero:
-  name: VitePress
-  text: Vite & Vue powered static site generator.
-  tagline: Lorem ipsum...
+  name: zhangr4.github.io
+  text: Happy coding
   image:
     src: /profile.png
-    alt: VitePress
+    alt: profile
   actions:
     - theme: brand
-      text: Get Started
-      link: /guide/what-is-vitepress
-    - theme: alt
       text: View on GitHub
-      link: https://github.com/vuejs/vitepress
+      link: https://github.com/zhangr4
 
 features:
-  - icon: ⚡️
-    title: Adocs, The DX that can't be beat
-    details: Lorem ipsum...
-  - icon: 🎉
-    title: Power of Vue meets Markdown
-    details: Lorem ipsum...
-  - icon: 🔥
-    title: Simple and minimal, always
-    details: Lorem ipsum...
-  - icon: 🎀
-    title: Stylish and cool
-    details: Lorem ipsum...
+  - icon: 🌐
+    title: Blogs Content
+    link: /content
+  - icon: 👨‍💼
+    title: About me
+    link: /about-me
 ---

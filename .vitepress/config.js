@@ -33,11 +33,10 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: "Examples",
+        text: "All blogs",
         items: [
-          // { text: "Markdown Examples", link: "/markdown-examples" },
-          // { text: "Runtime API Examples", link: "/api-examples" },
-          { text: "About Me", link: "/about-me" },
+          // { text: "About Me", link: "/about-me" },
+          { text: "Use WebView2 In Console Application", link: "Blogs/use-webview2-in-console-application"}
         ],
       },
     ],
