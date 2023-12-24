@@ -38,6 +38,7 @@ export default defineConfig({
           // { text: "Markdown Examples", link: "/markdown-examples" },
           // { text: "Runtime API Examples", link: "/api-examples" },
           { text: "About Me", link: "/about-me" },
+          { text: "Use WebView2 In Console Application", link: "/use-webview2-in-console-application"}
         ],
       },
     ],
