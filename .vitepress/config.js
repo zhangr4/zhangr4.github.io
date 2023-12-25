@@ -72,7 +72,7 @@ export default defineConfig({
             link: "Blogs/use-webview2-in-console-application",
           },
           {
-            text: "Encountered challenges while initiating a Git repository and pushing to GitHub using VS, along with solutions",
+            text: "Verify Git Commit",
             link: "Blogs/verify-git-commit",
           },
         ],
