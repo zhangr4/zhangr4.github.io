@@ -1,8 +1,11 @@
 ---
 author: Zhang Ran
-title: Use WebView2 In Console Application
+date: 24-Dec-2023
 taxonomies:
   - tags: ["C#", "WebView2", "Console Application"]
+next: 
+  text: 'Verify Git Commit'
+  link: '/BLogs/verify-git-commit'
 ---
 
 # Use WebView2 In Console Application
@@ -40,24 +43,24 @@ The strategy involves having a UI thread to trigger the WebView2 controller.
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup Label="Globals">
-		<WebView2UseWinRT>False</WebView2UseWinRT>
-	</PropertyGroup>
+ <PropertyGroup Label="Globals">
+  <WebView2UseWinRT>False</WebView2UseWinRT>
+ </PropertyGroup>
 
-	<PropertyGroup>
-		<OutputType>Exe</OutputType>
-		<TargetFramework>net8.0-windows</TargetFramework>
-		<UseWPF>true</UseWPF>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-		<InvariantGlobalization>true</InvariantGlobalization>
-		<SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
-	</PropertyGroup>
+ <PropertyGroup>
+  <OutputType>Exe</OutputType>
+  <TargetFramework>net8.0-windows</TargetFramework>
+  <UseWPF>true</UseWPF>
+  <ImplicitUsings>enable</ImplicitUsings>
+  <Nullable>enable</Nullable>
+  <InvariantGlobalization>true</InvariantGlobalization>
+  <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+ </PropertyGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2210.55" />
-		<PackageReference Include="WebView2.Runtime.X64" Version="120.0.2210.91" />
-	</ItemGroup>
+ <ItemGroup>
+  <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2210.55" />
+  <PackageReference Include="WebView2.Runtime.X64" Version="120.0.2210.91" />
+ </ItemGroup>
 
 </Project>
 ```

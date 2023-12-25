@@ -1,10 +1,11 @@
 ---
 author: Zhang Ran
 date: 25-Dec-2023
-title: Encountered challenges while initiating a Git repository and pushing to GitHub using VS, along with solutions
 taxonomies:
   - tags: ["Visual Studio", "Git", "Github", "GPG"]
 ---
+
+# Verify Git Commit
 
 - Environment
 
