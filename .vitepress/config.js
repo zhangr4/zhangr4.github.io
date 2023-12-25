@@ -37,6 +37,7 @@ export default defineConfig({
         text: "All blogs",
         items: [
           { text: "Use WebView2 In Console Application", link: "Blogs/use-webview2-in-console-application"}
+          { text: "Encountered challenges while initiating a Git repository and pushing to GitHub using VS, along with solutions", link: "Blogs/verify-git-commit"}
         ],
       },
     ],
