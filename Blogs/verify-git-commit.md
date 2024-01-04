@@ -3,7 +3,7 @@ author: Zhang Ran
 date: 25-Dec-2023
 taxonomies:
   - tags: ["Visual Studio", "Git", "Github", "GPG"]
-  next: 
+next: 
   text: 'Introduction of Time-based One-time password(TOTP)'
   link: '/BLogs/time-based-one-time-password'
 ---
