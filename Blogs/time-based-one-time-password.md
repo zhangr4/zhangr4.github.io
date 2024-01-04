@@ -21,15 +21,6 @@ $$
 HOTP(K,C) = Truncate(HMACSHA1(K,C))
 $$
 
-```mermaid
-graph LR
-   A[Shared Secret] -->|Key| B[hashing algorithm]
-   F[incremental/time-based] -->|counter| B
-   B -->|hash result| C[Truncate Function]
-   C -->|One-time Password| E[Result]
-
-```
-
 ### Key Generation
 
 For successful authentication, the prover and verifier must share the same secret or possess the knowledge of a secret transformation. This shared secret (K) is unique to each HOTP generator.

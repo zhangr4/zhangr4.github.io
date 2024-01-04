@@ -75,6 +75,10 @@ export default defineConfig({
             text: "Verify Git Commit",
             link: "Blogs/verify-git-commit",
           },
+          {
+            text: "Time-based One-time Password (TOTP) Demystified",
+            link: "Blogs/time-based-one-time-password",
+          },
         ],
       },
     ],
