@@ -79,8 +79,12 @@ export default defineConfig({
             text: "Time-based One-time Password (TOTP) Demystified",
             link: "Blogs/time-based-one-time-password",
           },
-        ],
-      },
+          {
+            text: "Fixing .NET 8 Azure App Service TLS Issue",
+            link: "Blogs/fixing-dotnet-8-azure-app-service-tls-Issue",
+          }
+        ]
+      }
     ],
 
     socialLinks: [

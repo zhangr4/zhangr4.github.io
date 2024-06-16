@@ -6,6 +6,9 @@ taxonomies:
 next: 
   text: 'Introduction of Time-based One-time password(TOTP)'
   link: '/BLogs/time-based-one-time-password'
+prev:
+  text: 'Use WebView2 In Console Application'
+  link: /Blogs/use-webview2-in-console-application'
 ---
 
 # Verify Git Commit

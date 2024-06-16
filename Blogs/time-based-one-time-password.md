@@ -3,6 +3,12 @@ author: Zhang Ran
 date: 04-Jan-2024
 taxonomies:
   - tags: ["TOTP", "OTP", "Algorithm"]
+next: 
+  text: 'Fixing .NET 8 Azure App Service TLS Issue'
+  link: '/Blogs/fixing-dotnet-8-azure-app-service-tls-Issue'
+prev:
+  text: 'Verify Git Commit'
+  link: '/BLogs/verify-git-commit'
 ---
 
 # Time-based One-time Password (TOTP) Demystified
