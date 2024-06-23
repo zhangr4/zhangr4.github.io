@@ -38,7 +38,7 @@ The strategy involves having a UI thread to trigger the WebView2 controller.
 
 ## Code snippets
 
-#### **`.csproj`**
+### **`.csproj`**
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -65,7 +65,7 @@ The strategy involves having a UI thread to trigger the WebView2 controller.
 </Project>
 ```
 
-#### **`program.cs`**
+### **`program.cs`**
 
 ```csharp
 using Microsoft.Web.WebView2.Core;

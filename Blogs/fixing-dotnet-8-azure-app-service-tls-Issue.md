@@ -3,6 +3,9 @@ author: Zhang Ran
 date: 16-Jun-2023
 taxonomies:
   - tags: [".NET 8", "Azure App Service", "TLSv1.3", "TLSv1.2"]
+next: 
+  text: '利用GitVersion对.NET项目版本控制'
+  link: '/Blogs/git-version-dotnet'
 prev: 
   text: 'Introduction of Time-based One-time password(TOTP)'
   link: '/BLogs/time-based-one-time-password'

@@ -7,3 +7,5 @@
 [Time Based One Time Password](Blogs/time-based-one-time-password.md)
 
 [Fixing .NET 8 Azure App Service TLS Issue](Blogs/fixing-dotnet-8-azure-app-service-tls-Issue.md)
+
+[利用GitVersion对.NET项目版本控制](Blogs/git-version-dotnet.md)
