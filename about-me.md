@@ -13,7 +13,7 @@ Email me: [ran.zhang863@hotmail.com](mailto:ran.zhang863@hotmail.com)
 
 | Period            | Location  | Position                   |
 | ----------------- | --------- | -------------------------- |
-| 2022.07 ~ present | Singapore | Software Engineer          |
+| 2022.07 ~ Present | Singapore | Software Engineer          |
 | 2021.09 ~ 2022.01 | Singapore | Intern - Software Engineer |
 | 2020.10 ~ 2021.01 | Shanghai  | Senior Project Engineer    |
 | 2016.10 ~ 2020.09 | Shanghai  | Project Engineer           |
@@ -26,6 +26,6 @@ Email me: [ran.zhang863@hotmail.com](mailto:ran.zhang863@hotmail.com)
 - Cloud: Azure App Service, Azure blob and fileshare, GCP, Aliyun, Docker
 - Others: MySQL, PostgreSQL, Firebase, Git, Jira, Bitbucket Pipeline
 
-# Languages
+## Languages
 
 - English, Mandarin
