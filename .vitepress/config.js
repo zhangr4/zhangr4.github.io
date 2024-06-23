@@ -82,6 +82,10 @@ export default defineConfig({
           {
             text: "Fixing .NET 8 Azure App Service TLS Issue",
             link: "Blogs/fixing-dotnet-8-azure-app-service-tls-Issue",
+          },
+          {
+            text: "利用GitVersion对.NET项目版本控制",
+            link: "Blogs/git-version-dotnet",
           }
         ]
       }
