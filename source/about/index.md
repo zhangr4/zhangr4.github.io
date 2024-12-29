@@ -1,9 +1,7 @@
 ---
 title: About me
-lang: en-US
+date: 2024-12-29 22:00:37
 ---
-
-# About me
 
 Hello, I'm **Zhangr4**, a novice programmer and former project manager in the Green Building industry.
 

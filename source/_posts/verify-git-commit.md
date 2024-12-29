@@ -1,17 +1,13 @@
 ---
-author: Zhang Ran
-date: 25-Dec-2023
-taxonomies:
-  - tags: ["Visual Studio", "Git", "Github", "GPG"]
-next: 
-  text: 'Introduction of Time-based One-time password(TOTP)'
-  link: '/BLogs/time-based-one-time-password'
-prev:
-  text: 'Use WebView2 In Console Application'
-  link: /Blogs/use-webview2-in-console-application'
+title: Verify Git Commit
+author: Zhangr4
+date: 2023-Dec-25
+tags: 
+  - Visual Studio, 
+  - Git, 
+  - Github,
+  - GPG
 ---
-
-# Verify Git Commit
 
 - Environment
 
@@ -20,6 +16,8 @@ prev:
   - Git is also installed.
 
 While following the steps from [Microsoft](https://learn.microsoft.com/en-us/visualstudio/version-control/git-create-repository?view=vs-2022#create-a-github-repo) to initialize a local git repository and push to a newly created git repository on GitHub using Visual Studio, some issues were encountered:
+
+<!-- more -->
 
 ### Issue: Visual Studio Repeatedly Requests Credentials ⚠️
 

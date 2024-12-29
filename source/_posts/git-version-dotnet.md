@@ -1,15 +1,11 @@
 ---
+title: 利用GitVersion对.NET项目版本控制
 author: Zhang Ran
 date: 23-Jun-2024
-taxonomies:
-  - tags: ["Git", "Versioning"]
-prev: 
-  text: 'Fixing .NET 8 Azure App Service TLS Issue'
-  link: '/Blogs/fixing-dotnet-8-azure-app-service-tls-Issue'
-
+tags: 
+  - Git,
+  - Versioning
 ---
-
-# 利用GitVersion对.NET项目版本控制
 
 最早在初学C#的时候有接触过一点点GitVersion，但它的Configuration过于繁杂，当时对C#也不是很了解，尤其是对Assembly，文件结构，构建，编译项目相关内容。所以看过Demo也就忘了。这次参考相关文章和官网的文档进行尝试。
 
@@ -18,6 +14,8 @@ prev:
 - IDE: Visual Studio 2022
 - .NET Runtime: .Net 8
 - GitVersion: gitversion.tool 6.0.0-rc.1
+
+<!-- more -->
 
 ## 试验过程
 
@@ -47,7 +45,7 @@ prev:
 
 .Net项目创建时会默认在Build时生成程序集信息，需要在项目属性中取消勾选Generate AssemblyInfo。或者在.csproj文件中Property Group中添加`<GenerateAssemblyInfo>False</GenerateAssemblyInfo>`。这样Build时就不会自动生成AssemblyInfo.cs文件。
 
-![取消勾选Generate AssemblyInfo](/gitversion_project_property.png)
+![取消勾选Generate AssemblyInfo](/git-version-dotnet/gitversion_project_property.png)
 
 AssemblyInfo.cs文件一般位于Property文件下。Properties文件夹在初始时是没有的，需要新建。如果是ASP.NET项目，Properties文件下会有launch profile。
 
@@ -71,7 +69,7 @@ dotnet-gitversion /updateassemblyinfo Properties\AssemblyInfo.cs /ensureassembly
 dotnet-gitversion /updateassemblyinfo $(ProjectDir)Properties\AssemblyInfo.cs /ensureassemblyinfo
 ```
 
-![添加预编译事件](/gitversion_prebuild_event.png)
+![添加预编译事件](/git-version-dotnet/gitversion_prebuild_event.png)
 
 ### 更新GitVersion配置文件
 

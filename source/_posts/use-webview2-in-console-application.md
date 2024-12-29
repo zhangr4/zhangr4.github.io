@@ -1,14 +1,12 @@
 ---
-author: Zhang Ran
-date: 24-Dec-2023
-taxonomies:
-  - tags: ["C#", "WebView2", "Console Application"]
-next: 
-  text: 'Verify Git Commit'
-  link: '/BLogs/verify-git-commit'
+title: Use WebView2 In Console Application
+author: Zhangr4
+date: 2023-Dec-24
+tags: 
+  - C#, 
+  - WebView2, 
+  - Console Application
 ---
-
-# Use WebView2 In Console Application
 
 ## What is WebView2
 
@@ -25,6 +23,8 @@ According to the introduction, WebView2 is supported in the following programmin
 - .NET 6
 - WinUI 2.0
 - WinUI 3.0
+
+<!-- more -->
 
 ### Application in Console Application
 
