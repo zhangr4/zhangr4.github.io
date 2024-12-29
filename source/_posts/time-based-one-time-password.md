@@ -1,21 +1,18 @@
 ---
-author: Zhang Ran
-date: 04-Jan-2024
-taxonomies:
-  - tags: ["TOTP", "OTP", "Algorithm"]
-next: 
-  text: 'Fixing .NET 8 Azure App Service TLS Issue'
-  link: '/Blogs/fixing-dotnet-8-azure-app-service-tls-Issue'
-prev:
-  text: 'Verify Git Commit'
-  link: '/BLogs/verify-git-commit'
+title: Time-based One-time Password (TOTP) Demystified
+author: Zhangr4
+date: 2024-Jan-04
+tags: 
+  - TOTP, 
+  - OTP,
+  - Algorithm
 ---
-
-# Time-based One-time Password (TOTP) Demystified
 
 ## Introduction
 
 Time-based One-time Password (TOTP), standardized under [RFC 6238](https://datatracker.ietf.org/doc/html/rfc6238) is a crucial component in the realm of online security, serving as a cornerstone for the Initiative for Open Authentication (OATH). TOTP is widely employed in various two-factor authentication (2FA) systems, providing an additional layer of protection beyond traditional password mechanisms. This article delves into the TOTP algorithm, explaining its foundations and highlighting key implementation aspects.
+
+<!-- more -->
 
 ## Understanding the Algorithm
 

@@ -1,21 +1,17 @@
 ---
-author: Zhang Ran
-date: 16-Jun-2023
-taxonomies:
-  - tags: [".NET 8", "Azure App Service", "TLSv1.3", "TLSv1.2"]
-next: 
-  text: '利用GitVersion对.NET项目版本控制'
-  link: '/Blogs/git-version-dotnet'
-prev: 
-  text: 'Introduction of Time-based One-time password(TOTP)'
-  link: '/BLogs/time-based-one-time-password'
+title: Overcoming Network Connection Issues in .NET 8 - A Troubleshooting Journey
+author: Zhangr4
+date: 2023-Jun-06
+tags: 
+  - .Net 8, 
+  - Azure App Service, 
+  - TLSv1.3,
+  - TLSv1.2
 ---
 
-# Overcoming Network Connection Issues in .NET 8: A Troubleshooting Journey
-
-## Introduction
-
 In my latest project, I encountered a puzzling issue while deploying a .NET 8 application to Azure App Service. Despite working flawlessly on Windows, the application failed when deployed to the Azure App Service for Linux. This post details the steps I took to diagnose and resolve the problem, offering insights that might help others facing similar challenges.
+
+<!-- more -->
 
 ## Description
 
