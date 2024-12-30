@@ -30,6 +30,8 @@ The following scenarios are discussed in the [issue](https://github.com/dotnet/r
 
     This scenario involves converting C# code into non-C# artifacts, such as JSON or XML files. It is useful for generating configuration files, documentation, or other artifacts that are not C# code. A well-known use case is generating OpenAPI/Swagger documentation. Currently, Swagger/OpenAPI documentation is generated at runtime when the program starts.
 
+<!-- more -->
+
 ### Limitations of Source Generators
 
 Despite their powerful capabilities, source generators have some limitations:
