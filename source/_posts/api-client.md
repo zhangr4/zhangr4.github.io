@@ -84,60 +84,73 @@ Cons:
 - **Complexity**: Can be overkill for simple APIs.
 - **Performance**: May have performance overhead in some cases.
 
-## Popularity
+## GitHub Repository Stars
 
-- Github repository stars:
+Until 30-Dec-2024, the github repo stars as shown below:
 
-  The repository 'Microsoft/kiota' has 3081 stars.
-  The repository 'reactiveui/refit' has 8723 stars.
-  The repository 'tmenier/Flurl' has 4246 stars.
-  The repository 'restsharp/RestSharp' has 9651 stars.
-
-- Nuget Package downloads:
-  
-  [TODO]
+| Library   | Repository                | Stars |
+| --------- | ------------------------- | ----- |
+| Kiota     | Microsoft/kiota           | 3081  |
+| Refit     | reactiveui/refit          | 8723  |
+| Flurl     | tmenier/Flurl             | 4246  |
+| RestSharp | restsharp/RestSharp       | 9651  |
 
 ## Maintainability
 
-Code consistency
+### Code and Generated API Client Structure
+This section evaluates how uniformly the code and generated API clients are structured across different API definitions for each library.
 
-Are the code and generated API client structured uniformly across different API definitions?
+- **Kiota**: Uniform structure due to OpenAPI-based code generation.
+- **Refit**: Consistent structure if interfaces are defined uniformly.
+- **RestSharp**: No uniform structure; varies with manual implementation.
+- **Flurl**: No uniform structure; varies with dynamic request construction.
 
-Documentation and Community Support
+### Official Documentation
+This section assesses the quality and comprehensiveness of the official documentation provided by each library.
 
-Official Documentation: How well-documented is the library? Does it explain setup, usage, advanced scenarios, and troubleshooting?
-Community and Ecosystem: Are there active discussions, a sizable user base, or regular updates? Check GitHub issues, Stack Overflow, or forums.
-Examples: Are there sufficient examples for both common and edge cases?
+- **Kiota**: Comprehensive, covering setup, usage, and advanced scenarios. Troubleshooting guides available.
+- **Refit**: Well-documented with clear examples and explanations for setup, usage, and advanced scenarios. Troubleshooting information available.
+- **RestSharp**: Good documentation, but can be less detailed in some areas. Covers setup and usage well, but advanced scenarios and troubleshooting might require more community support.
+- **Flurl**: Thorough documentation with detailed guides on setup, usage, and advanced scenarios. Troubleshooting information provided.
 
-Maintenance Effort
+### Update Frequency
+This section examines how frequently each library receives updates, including recent commits and releases.
 
-Updates and Releases: How frequently does the library receive updates? Are there recent commits or releases?
-Dependency Management: Does it rely on many external dependencies? If so, are these dependencies stable and well-maintained?
-Backward Compatibility: Does the library ensure backward compatibility with prior versions?
+- **Kiota**: High commit and release frequency, with multiple commits and releases in December 2024.
+- **Refit**: High commit frequency, with several commits and releases in the last few months of 2024.
+- **RestSharp**: Frequent commits and releases, with recent activity extending into early January 2025.
+- **Flurl**: Frequent commits and releases, with recent activity extending into early January 2025.
 
-Ease of Integration
+### Licensing and Compliance
+This section reviews the licensing and compliance aspects of each library.
 
-Framework Compatibility: Does it integrate smoothly with your project’s framework (e.g., .NET Framework, .NET Core, or .NET 6/7)?
-Customization: Can you easily extend or customize the generated client for specific requirements?
-Integration Complexity: Does it provide simple mechanisms for features like retry policies, logging, and authentication?
+- **Kiota**: MIT License (typically used by Microsoft projects)
+- **Refit**: MIT License
+- **RestSharp**: Apache 2.0 License
+- **Flurl**: MIT License
 
-Testing and Debugging
+All these licenses are permissive and generally allow for use in enterprise commercial projects.
 
-Testability: Does it support or simplify the testing of API calls (e.g., mocking HTTP responses)?
-Debugging Tools: Are error messages and stack traces clear and helpful during development?
+### Learning Curve
+This section evaluates the learning curve associated with each library.
 
-Licensing and Compliance
+- **Refit**: Easiest to learn due to its simplicity, excellent documentation, and active community support.
+- **RestSharp**: Easy to learn with comprehensive documentation and active community support. Slightly more complex due to broader feature set.
+- **Flurl**: Relatively easy to learn with a fluent API that simplifies HTTP requests. Slightly steeper learning curve compared to Refit and RestSharp due to its unique approach.
+- **Kiota**: Hardest to learn due to its complexity as a code generator and the additional steps required to understand and use the generated code. More suitable for advanced users.
 
-License Type: Is the library’s license compatible with your project’s licensing and distribution model (e.g., GPL, MIT)?
-Corporate Policy Compliance: Does it align with your organization's software policies?
-
-Ease of Adoption: How much time does it take for new developers to learn and use the library effectively?
-
-open api support?
+### Maintainability comparison
+| Aspect              | Kiota         | Refit      | RestSharp  | Flurl    |
+| ------------------- | ------------- | ---------- | ---------- | -------- |
+| **Code Structure**  | Uniform       | Consistent | Varies     | Varies   |
+| **Documentation**   | Comprehensive | Excellent  | Good       | Detailed |
+| **Update Frequency**| High          | High       | Frequent   | Frequent |
+| **License**         | MIT           | MIT        | Apache 2.0 | MIT      |
+| **Learning Curve**  | Hard          | Easy       | Easy       | Moderate |
 
 ## Performance
 
-I created a simple benchmarking to compare these different stacks, refer to ][ApiClientComparison](...)
+I created a simple benchmarking to compare these different stacks, refer to[ApiClientComparison](...)
 
 api server from default asp.net webapi template
 
