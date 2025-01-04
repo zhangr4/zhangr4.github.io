@@ -10,6 +10,8 @@ tags:
 
 The Roslyn API empowers developers with compile-time metaprogramming through [source generator](https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/#source-generators), which can produce C# code and additional files during the compilation process. This blog post delves into the various scenarios where source generators can be applied and highlights their limitations.
 
+<!-- more -->
+
 ### Understanding Source Generators
 
 A source file typically refers to a text file containing C# source code that is generated during compilation. The Roslyn API's source generators can automate this process, making development more efficient.
@@ -29,8 +31,6 @@ The following scenarios are discussed in the [issue](https://github.com/dotnet/r
 - Source to Non-source
 
     This scenario involves converting C# code into non-C# artifacts, such as JSON or XML files. It is useful for generating configuration files, documentation, or other artifacts that are not C# code. A well-known use case is generating OpenAPI/Swagger documentation. Currently, Swagger/OpenAPI documentation is generated at runtime when the program starts.
-
-<!-- more -->
 
 ### Limitations of Source Generators
 
