@@ -14,6 +14,8 @@ tags:
 
 When developing web API clients, especially for in C#. There are few popular options as far I can see: Kiota, Refit, Flurl, and RestSharp.
 
+<!-- more -->
+
 ## Tech stack options
 
 ### Kiota
@@ -84,16 +86,16 @@ Cons:
 - **Complexity**: Can be overkill for simple APIs.
 - **Performance**: May have performance overhead in some cases.
 
-## GitHub Repository Stars
+## Popularity
 
 Until 30-Dec-2024, the github repo stars as shown below:
 
-| Library   | Repository                | Stars |
-| --------- | ------------------------- | ----- |
-| Kiota     | Microsoft/kiota           | 3081  |
-| Refit     | reactiveui/refit          | 8723  |
-| Flurl     | tmenier/Flurl             | 4246  |
-| RestSharp | restsharp/RestSharp       | 9651  |
+| Library   | Repository          | Stars |
+| --------- | ------------------- | ----- |
+| RestSharp | restsharp/RestSharp | 9651  |
+| Refit     | reactiveui/refit    | 8723  |
+| Flurl     | tmenier/Flurl       | 4246  |
+| Kiota     | Microsoft/kiota     | 3081  |
 
 ## Maintainability
 
@@ -150,45 +152,54 @@ This section evaluates the learning curve associated with each library.
 
 ## Performance
 
-I created a simple benchmarking to compare these different stacks, refer to[ApiClientComparison](...)
+I created a simple benchmarking to compare these different stacks, refer to [ApiClientComparison](https://github.com/zhangr4/Playground/tree/main/Zhangr4.PlaygroundDotNet/Zhangr4.Playground.ApiComparison.ClientBenchmark)
 
-api server from default asp.net webapi template
+Spec: BenchmarkDotNet v0.14.0, Windows 11 (10.0.26100.2605). 
+AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx, 1 CPU, 8 logical and 4 physical cores
 
-open api documentation generated as json
+- Host: .NET 8.0.11 (8.0.1124.51707), X64 RyuJIT AVX2
 
-Run different client to call the endpoint compare time elapsed and memory consumed
+  | Method              | Mean     | Error   | StdDev   | Median   | Ratio | RatioSD | Gen0    | Allocated | Alloc Ratio |
+  |-------------------- |---------:|--------:|---------:|---------:|------:|--------:|--------:|----------:|------------:|
+  | HttpClient_Run      | 281.8 μs | 5.63 μs | 10.99 μs | 279.6 μs |  1.00 |    0.05 |  1.9531 |   4.01 KB |        1.00 |
+  | KiotaClient_Run     | 417.6 μs | 8.28 μs | 22.37 μs | 406.2 μs |  1.48 |    0.10 | 10.7422 |  22.64 KB |        5.65 |
+  | RefitClient_Run     | 251.0 μs | 3.49 μs |  3.09 μs | 250.1 μs |  0.89 |    0.04 |  2.9297 |   6.11 KB |        1.52 |
+  | FlurlClient_Run     | 271.5 μs | 2.97 μs |  2.48 μs | 271.1 μs |  0.96 |    0.04 |  6.3477 |  13.25 KB |        3.31 |
+  | RestSharpClient_Run | 303.3 μs | 4.17 μs |  3.48 μs | 303.0 μs |  1.08 |    0.04 | 19.5313 |   36.1 KB |        9.01 |
 
-performance comparison table:
+- Host: .NET Framework 4.8.1 (4.8.9290.0), X64 RyuJIT VectorSize=256
 
-[TODO]
+  | Method              | Mean     | Error   | StdDev   | Median   | Ratio | RatioSD | Gen0    | Allocated | Alloc Ratio |
+  |-------------------- |---------:|--------:|---------:|---------:|------:|--------:|--------:|----------:|------------:|
+  | HttpClient_Run      | 391.7 us | 8.25 us | 23.53 us | 386.3 us |  1.00 |    0.08 |  7.3242 |  15.95 KB |        1.00 |
+  | KiotaClient_Run     |       NA |      NA |       NA |       NA |     ? |       ? |      NA |        NA |           ? |
+  | RefitClient_Run     | 445.0 us | 9.93 us | 28.48 us | 444.3 us |  1.14 |    0.10 |  8.7891 |  18.96 KB |        1.19 |
+  | FlurlClient_Run     | 426.6 us | 8.92 us | 25.29 us | 418.2 us |  1.09 |    0.09 | 14.6484 |  31.31 KB |        1.96 |
+  | RestSharpClient_Run | 518.3 us | 5.67 us |  4.73 us | 518.0 us |  1.33 |    0.08 | 27.3438 |   57.6 KB |        3.61 |
 
-## Shared feature
-
-Despite their differences, Kiota, Refit, RestSharp, and Flurl share several common features that make them popular choices for developing web API clients:
-
-- **HTTP Client Abstraction**: All these libraries provide an abstraction over the raw HTTP client, simplifying the process of making HTTP requests.
-- **Asynchronous Support**: They support asynchronous operations, allowing for non-blocking HTTP calls.
-- **Serialization/Deserialization**: Built-in support for serializing request bodies and deserializing response bodies, often using popular libraries like JSON.NET.
-- **Error Handling**: Mechanisms to handle HTTP errors and exceptions gracefully.
-- **Configuration**: Options to configure headers, query parameters, and other request settings.
-- **Authentication**: Support for various authentication methods, such as OAuth, API keys, and basic authentication.
-- **Extensibility**: Ability to extend and customize the behavior of the HTTP client through middleware, handlers, or plugins.
-- **Dependency Injection**: Integration with dependency injection frameworks to manage the lifecycle of HTTP clients and related services.
-
-## Key Differences
+The performance benchmarking results should be interpreted with caution. They do not fully represent real-world scenarios, as network connectivity often plays a more significant role.
 
 ## Summary
 
-comparison table
+### Shared Features
+Despite their differences, Kiota, Refit, RestSharp, and Flurl share several common features that make them popular choices for developing web API clients:
 
-Target use scenarios:
+- **HTTP Client Abstraction**: Simplifies making HTTP requests.
+- **Asynchronous Support**: Allows for non-blocking HTTP calls.
+- **Serialization/Deserialization**: Built-in support using popular libraries like JSON.NET.
+- **Error Handling**: Mechanisms to handle HTTP errors and exceptions gracefully.
+- **Configuration**: Options to configure headers, query parameters, and other request settings.
+- **Authentication**: Support for various methods like OAuth, API keys, and basic authentication.
+- **Extensibility**: Ability to extend and customize behavior through middleware, handlers, or plugins.
+- **Dependency Injection**: Integration with dependency injection frameworks.
 
-- with/without dependency injection
+### Target Use Scenarios
 
-- open api specification provided or not
+- **Kiota** is specialized for generating API clients from OpenAPI descriptions, making it ideal for projects requiring consistent API consumption.
+- **Refit** provides a type-safe, attribute-based approach to creating REST clients, reducing boilerplate code for .NET developers.
+- **RestSharp** offers a comprehensive solution for making HTTP requests with extensive configuration options, suitable for complex interactions with RESTful services.
+- **Flurl** emphasizes simplicity and readability with a fluent interface, making it a good choice for developers who prefer chaining requests and asynchronous operations.
 
-- use heavily or rare usage
+___
 
-- client sdk developer or api consumer
-
-- net472 or net8
+Disclaimer: This blog post was partially created using GitHub Copilot for efficiency and content generation.
