@@ -2,6 +2,7 @@
 title: Comparing Web API Client Development Stacks(C#)
 author: Zhangr4
 date: 2024-Dec-30
+updated: 2025-Jan-5
 tags:
   - Web Api Client
   - Kiota
@@ -152,30 +153,27 @@ This section evaluates the learning curve associated with each library.
 
 ## Performance
 
-I created a simple benchmarking to compare these different stacks, refer to [ApiClientComparison](https://github.com/zhangr4/Playground/tree/main/Zhangr4.PlaygroundDotNet/Zhangr4.Playground.ApiComparison.ClientBenchmark)
+I created a simple benchmarking to compare these different stacks.
 
-Spec: BenchmarkDotNet v0.14.0, Windows 11 (10.0.26100.2605). 
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.26100.2605)
 AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx, 1 CPU, 8 logical and 4 physical cores
 
-- Host: .NET 8.0.11 (8.0.1124.51707), X64 RyuJIT AVX2
+Host:
+.NET 8.0             : .NET 8.0.11 (8.0.1124.51707), X64 RyuJIT AVX2
+.NET Framework 4.7.2 : .NET Framework 4.8.1 (4.8.9290.0), X64 RyuJIT VectorSize=256
 
-  | Method              | Mean     | Error   | StdDev   | Median   | Ratio | RatioSD | Gen0    | Allocated | Alloc Ratio |
-  |-------------------- |---------:|--------:|---------:|---------:|------:|--------:|--------:|----------:|------------:|
-  | HttpClient_Run      | 281.8 μs | 5.63 μs | 10.99 μs | 279.6 μs |  1.00 |    0.05 |  1.9531 |   4.01 KB |        1.00 |
-  | KiotaClient_Run     | 417.6 μs | 8.28 μs | 22.37 μs | 406.2 μs |  1.48 |    0.10 | 10.7422 |  22.64 KB |        5.65 |
-  | RefitClient_Run     | 251.0 μs | 3.49 μs |  3.09 μs | 250.1 μs |  0.89 |    0.04 |  2.9297 |   6.11 KB |        1.52 |
-  | FlurlClient_Run     | 271.5 μs | 2.97 μs |  2.48 μs | 271.1 μs |  0.96 |    0.04 |  6.3477 |  13.25 KB |        3.31 |
-  | RestSharpClient_Run | 303.3 μs | 4.17 μs |  3.48 μs | 303.0 μs |  1.08 |    0.04 | 19.5313 |   36.1 KB |        9.01 |
-
-- Host: .NET Framework 4.8.1 (4.8.9290.0), X64 RyuJIT VectorSize=256
-
-  | Method              | Mean     | Error   | StdDev   | Median   | Ratio | RatioSD | Gen0    | Allocated | Alloc Ratio |
-  |-------------------- |---------:|--------:|---------:|---------:|------:|--------:|--------:|----------:|------------:|
-  | HttpClient_Run      | 391.7 us | 8.25 us | 23.53 us | 386.3 us |  1.00 |    0.08 |  7.3242 |  15.95 KB |        1.00 |
-  | KiotaClient_Run     |       NA |      NA |       NA |       NA |     ? |       ? |      NA |        NA |           ? |
-  | RefitClient_Run     | 445.0 us | 9.93 us | 28.48 us | 444.3 us |  1.14 |    0.10 |  8.7891 |  18.96 KB |        1.19 |
-  | FlurlClient_Run     | 426.6 us | 8.92 us | 25.29 us | 418.2 us |  1.09 |    0.09 | 14.6484 |  31.31 KB |        1.96 |
-  | RestSharpClient_Run | 518.3 us | 5.67 us |  4.73 us | 518.0 us |  1.33 |    0.08 | 27.3438 |   57.6 KB |        3.61 |
+| Method              | Runtime  | Mean     | Error    | StdDev   | Ratio | RatioSD | Gen0    | Allocated | Alloc Ratio |
+|-------------------- |---------:| --------:|---------:|---------:|------:|--------:|--------:|----------:|------------:|
+| HttpClient_Run      | .NET 8.0 | 287.9 us |  5.14 us | 10.61 us |  0.62 |    0.09 |  1.9531 |   4.01 KB |        0.25 |
+| KiotaClient_Run     | .NET 8.0 | 478.4 us | 16.74 us | 46.95 us |  1.04 |    0.18 | 10.7422 |  22.65 KB |        1.42 |
+| RefitClient_Run     | .NET 8.0 | 265.0 us |  5.03 us |  6.18 us |  0.57 |    0.08 |  2.9297 |   6.11 KB |        0.38 |
+| FlurlClient_Run     | .NET 8.0 | 283.2 us |  3.19 us |  2.49 us |  0.61 |    0.09 |  6.3477 |  13.25 KB |        0.83 |
+| RestSharpClient_Run | .NET 8.0 | 320.2 us |  6.24 us |  5.83 us |  0.69 |    0.10 | 19.5313 |  35.93 KB |        2.25 |
+| HttpClient_Run      | .Net472  | 472.1 us | 24.53 us | 71.54 us |  1.02 |    0.21 |  7.3242 |  15.97 KB |        1.00 |
+| KiotaClient_Run     | .Net472  |       NA |       NA |       NA |     ? |       ? |      NA |        NA |           ? |
+| RefitClient_Run     | .Net472  | 486.0 us |  8.98 us |  8.40 us |  1.05 |    0.15 |  8.7891 |  19.15 KB |        1.20 |
+| FlurlClient_Run     | .Net472  | 479.8 us |  8.01 us |  7.10 us |  1.04 |    0.15 | 15.1367 |  31.35 KB |        1.96 |
+| RestSharpClient_Run | .Net472  | 575.8 us | 11.51 us | 20.16 us |  1.25 |    0.18 | 27.3438 |  57.43 KB |        3.60 |
 
 The performance benchmarking results should be interpreted with caution. They do not fully represent real-world scenarios, as network connectivity often plays a more significant role.
 
