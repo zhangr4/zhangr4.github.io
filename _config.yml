@@ -91,6 +91,7 @@ pagination_dir: page
 ## include:/exclude: options only apply to the 'source/' folder
 include:
 exclude:
+  - 'custom-feed.xml'
 ignore:
 
 # Extensions
@@ -114,8 +115,9 @@ symbols_count_time:
 # RSS
 feed:
   enable: true
-  type: atom
-  path: atom.xml
+  type:
+    - atom
+    - rss2
   limit: 20
   hub:
   content:
@@ -125,6 +127,7 @@ feed:
   icon: icon.png
   autodiscovery: true
   template:
+    - ./source/custom-feed.xml
 
 
 tag_generator:
