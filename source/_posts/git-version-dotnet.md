@@ -45,7 +45,7 @@ tags:
 
 .Net项目创建时会默认在Build时生成程序集信息，需要在项目属性中取消勾选Generate AssemblyInfo。或者在.csproj文件中Property Group中添加`<GenerateAssemblyInfo>False</GenerateAssemblyInfo>`。这样Build时就不会自动生成AssemblyInfo.cs文件。
 
-{% asset_img gitversion_project_property.png %}
+![](gitversion_project_property.png)
 
 AssemblyInfo.cs文件一般位于Property文件下。Properties文件夹在初始时是没有的，需要新建。如果是ASP.NET项目，Properties文件下会有launch profile。
 
@@ -69,7 +69,7 @@ dotnet-gitversion /updateassemblyinfo Properties\AssemblyInfo.cs /ensureassembly
 dotnet-gitversion /updateassemblyinfo $(ProjectDir)Properties\AssemblyInfo.cs /ensureassemblyinfo
 ```
 
-{% asset_img gitversion_prebuild_event.png %}
+![](gitversion_prebuild_event.png)
 
 ### 更新GitVersion配置文件
 
