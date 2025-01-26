@@ -9,7 +9,8 @@ tags:
 
 [Microsoft DevTunnels](https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/) is a powerful tool that allows developers to securely expose their local development environment to the internet. This can be incredibly useful for testing webhooks, APIs, or any other service that requires external access to your local machine.
 
-![architecture diagram](dev-tunnels/architect-diagram.jpg)
+{% asset_img architect-diagram.jpg %}
+
 - **Secure Tunnels**: DevTunnels ensures that your local environment is securely accessible from the internet.
 - **Easy Setup**: With simple configuration, you can quickly set up a tunnel and start testing.
 - **Integration with Development Tools**: DevTunnels integrates seamlessly with popular development tools, making it easy to use in your existing workflow.
@@ -20,7 +21,7 @@ tags:
 
 DevTunnels can be found easily in visual studio.
 
-![visual studio snapshot](dev-tunnels/vs.png)
+{% asset_img vs.png %}
 
 please check [Microsoft Documentation](https://learn.microsoft.com/en-us/connectors/custom-connectors/port-tunneling) for more details.
 
@@ -28,7 +29,7 @@ please check [Microsoft Documentation](https://learn.microsoft.com/en-us/connect
 
 DevTunnels can also be used via CLI
 
-![terminal snapshot](dev-tunnels/cli.png)
+{% asset_img cli.png %}
 
 Please check **[DevTunnels Documentation](https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/)** for more details
 
