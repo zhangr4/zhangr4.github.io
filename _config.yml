@@ -132,3 +132,7 @@ feed:
 
 tag_generator:
   enable_index_page: false
+
+marked:
+  prependRoot: true
+  postAsset: true
