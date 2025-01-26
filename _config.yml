@@ -9,7 +9,7 @@ description: 'a novice programmer and former project manager in the Green Buildi
 keywords:
 author: Zhangr4
 language: en
-timezone: 'Asia/Singapore'
+# timezone: 'Asia/Singapore'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
