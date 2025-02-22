@@ -101,6 +101,7 @@ Until 30-Dec-2024, the github repo stars as shown below:
 ## Maintainability
 
 ### Code and Generated API Client Structure
+
 This section evaluates how uniformly the code and generated API clients are structured across different API definitions for each library.
 
 - **Kiota**: Uniform structure due to OpenAPI-based code generation.
@@ -109,6 +110,7 @@ This section evaluates how uniformly the code and generated API clients are stru
 - **Flurl**: No uniform structure; varies with dynamic request construction.
 
 ### Official Documentation
+
 This section assesses the quality and comprehensiveness of the official documentation provided by each library.
 
 - **Kiota**: Comprehensive, covering setup, usage, and advanced scenarios. Troubleshooting guides available.
@@ -117,6 +119,7 @@ This section assesses the quality and comprehensiveness of the official document
 - **Flurl**: Thorough documentation with detailed guides on setup, usage, and advanced scenarios. Troubleshooting information provided.
 
 ### Update Frequency
+
 This section examines how frequently each library receives updates, including recent commits and releases.
 
 - **Kiota**: High commit and release frequency, with multiple commits and releases in December 2024.
@@ -125,6 +128,7 @@ This section examines how frequently each library receives updates, including re
 - **Flurl**: Frequent commits and releases, with recent activity extending into early January 2025.
 
 ### Licensing and Compliance
+
 This section reviews the licensing and compliance aspects of each library.
 
 - **Kiota**: MIT License (typically used by Microsoft projects)
@@ -135,6 +139,7 @@ This section reviews the licensing and compliance aspects of each library.
 All these licenses are permissive and generally allow for use in enterprise commercial projects.
 
 ### Learning Curve
+
 This section evaluates the learning curve associated with each library.
 
 - **Refit**: Easiest to learn due to its simplicity, excellent documentation, and active community support.
@@ -143,6 +148,7 @@ This section evaluates the learning curve associated with each library.
 - **Kiota**: Hardest to learn due to its complexity as a code generator and the additional steps required to understand and use the generated code. More suitable for advanced users.
 
 ### Maintainability comparison
+
 | Aspect              | Kiota         | Refit      | RestSharp  | Flurl    |
 | ------------------- | ------------- | ---------- | ---------- | -------- |
 | **Code Structure**  | Uniform       | Consistent | Varies     | Varies   |
@@ -180,6 +186,7 @@ The performance benchmarking results should be interpreted with caution. They do
 ## Summary
 
 ### Shared Features
+
 Despite their differences, Kiota, Refit, RestSharp, and Flurl share several common features that make them popular choices for developing web API clients:
 
 - **HTTP Client Abstraction**: Simplifies making HTTP requests.
