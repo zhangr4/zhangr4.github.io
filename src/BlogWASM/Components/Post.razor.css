@@ -1,0 +1,135 @@
+﻿/* Blog Post Container */
+.post {
+    max-width: 60em;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #222;
+}
+
+/* Title */
+.post h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+}
+
+/* Metadata subtitle under title */
+.post-meta {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 1.8rem;
+}
+
+.post-meta span + span::before {
+    content: "·";
+    margin: 0 0.4rem;
+    color: #ccc;
+}
+
+/* Markdown content area */
+.post-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Headings */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    font-weight: 600;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    line-height: 1.25;
+}
+
+/* Links */
+.post-content a {
+    color: #0593d3;
+    text-decoration: none;
+    border-bottom: 1px solid #0593d3;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.post-content a:hover {
+    color: #fc6423;
+    border-bottom-color: #fc6423;
+}
+
+/* Paragraphs */
+.post-content p {
+    margin: 1em 0;
+}
+
+/* Lists */
+.post-content ul,
+.post-content ol {
+    padding-left: 1.4em;
+    margin: 1em 0;
+}
+
+/* Blockquotes */
+.post-content blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 1em;
+    color: #666;
+    margin: 1em 0;
+    font-style: italic;
+}
+
+/* Code blocks */
+.post-content pre {
+    background: #f6f8fa;
+    padding: 1em;
+    border-radius: 0.4rem;
+    overflow-x: auto;
+}
+
+.post-content code {
+    background: #f6f8fa;
+    padding: 0.2em 0.4em;
+    border-radius: 0.3rem;
+    font-family: Consolas, monospace;
+    font-size: 0.95em;
+}
+
+/* Tables */
+.post-content table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5em 0;
+}
+
+.post-content th,
+.post-content td {
+    border: 1px solid #ddd;
+    padding: 0.6em;
+}
+
+.post-content th {
+    background: #f6f6f6;
+    font-weight: 600;
+}
+
+/* Images */
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.2em auto;
+}
+
+/* Horizontal rule */
+.post-content hr {
+    border: none;
+    border-top: 1px solid #eaeaea;
+    margin: 2em 0;
+}

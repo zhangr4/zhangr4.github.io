@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Project Path="BlogWASM.PostIndexGenerator.Test/BlogWASM.PostIndexGenerator.Test.csproj" Id="55ac67ab-f4a0-452e-920d-3073a2dae6b8" />
+  <Project Path="BlogWASM.PostIndexGenerator/BlogWASM.PostIndexGenerator.csproj" Id="78faaa6b-9c77-4cd0-b71b-9f0fa27cb617" />
+  <Project Path="BlogWASM/BlogWASM.csproj" />
+</Solution>

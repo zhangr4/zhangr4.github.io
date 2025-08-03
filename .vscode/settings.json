@@ -2,8 +2,10 @@
     "cSpell.words": [
         "Flurl",
         "Kiota",
+        "Markdig",
         "reactiveui",
         "Refitter",
         "restsharp"
-    ]
+    ],
+    "dotnet.defaultSolution": "BlogWASM.slnx"
 }
