@@ -1,6 +1,6 @@
+using System.Text.Json;
 using Markdig;
 using Microsoft.AspNetCore.Components;
-using System.Text.Json;
 
 namespace BlogWASM.Components;
 
@@ -31,7 +31,7 @@ public partial class Post
         var markdown = await Http.GetStringAsync(path);
         (var metadata, _markDownHtml) = MarkDownUtil.ToHtml(markdown, RenderPipeline);
 
-        if(metadata is not null)
+        if (metadata is not null)
         {
             metadata.TryGetValue("title", out var title);
             _title = title as string;
@@ -41,7 +41,7 @@ public partial class Post
             _author = author as string;
 
             metadata.TryGetValue("date", out var created);
-            if(created is string createdStr)
+            if (created is string createdStr)
             {
                 _ = DateTime.TryParse(createdStr, out _created);
             }
@@ -54,14 +54,8 @@ public partial class Post
         }
 
 #if DEBUG
-        var metadataJson = metadata is not null
-            ? JsonSerializer.Serialize(metadata)
-            : "null";
-        Logger.LogInformation(
-            "Post {Name} metadata: {@Metadata}",
-            Name,
-            metadataJson
-        );
+        var metadataJson = metadata is not null ? JsonSerializer.Serialize(metadata) : "null";
+        Logger.LogInformation("Post {Name} metadata: {@Metadata}", Name, metadataJson);
 #endif
     }
 }
