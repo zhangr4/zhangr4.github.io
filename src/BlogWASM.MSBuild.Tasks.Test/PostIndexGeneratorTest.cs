@@ -1,16 +1,16 @@
 using Microsoft.Build.Framework;
 using Moq;
 
-namespace BlogWASM.PostIndexGenerator.Test;
+namespace BlogWASM.MSBuild.Tasks.Test;
 
-public class PostIndexGenerateTest
+public class PostIndexGeneratorTest
 {
     private readonly Mock<IBuildEngine> buildEngine;
     private readonly List<BuildMessageEventArgs> messages = [];
     private readonly List<BuildErrorEventArgs> errors = [];
     private readonly ITestOutputHelper testOutput;
 
-    public PostIndexGenerateTest(ITestOutputHelper testOutput)
+    public PostIndexGeneratorTest(ITestOutputHelper testOutput)
     {
         this.testOutput = testOutput;
         buildEngine = new Mock<IBuildEngine>();
@@ -27,7 +27,7 @@ public class PostIndexGenerateTest
     {
         // Arrange
         var item = new Mock<ITaskItem>();
-        var generator = new PostIndexGenerate
+        var generator = new PostIndexGenerator
         {
             PostsDirectory = "Posts",
             BuildEngine = buildEngine.Object,

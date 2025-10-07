@@ -4,12 +4,12 @@ using Markdig.Extensions.Yaml;
 using Markdig.Syntax;
 using Microsoft.Build.Framework;
 
-namespace BlogWASM.PostIndexGenerator;
+namespace BlogWASM.MSBuild.Tasks;
 
 /// <summary>
 /// It is a MSBuild task to generate a JSON index of blog posts from markdown files with YAML front matter.
 /// </summary>
-public class PostIndexGenerate : Microsoft.Build.Utilities.Task
+public class PostIndexGenerator : Microsoft.Build.Utilities.Task
 {
     private static readonly JsonSerializerOptions _jsonSerializerOptions = new()
     {
