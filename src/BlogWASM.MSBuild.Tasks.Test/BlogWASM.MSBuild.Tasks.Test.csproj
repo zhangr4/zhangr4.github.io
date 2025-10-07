@@ -40,7 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlogWASM.PostIndexGenerator\BlogWASM.PostIndexGenerator.csproj" />
+    <ProjectReference Include="..\BlogWASM.MSBuild.Tasks\BlogWASM.MSBuild.Tasks.csproj" />
   </ItemGroup>
 
   <ItemGroup>
