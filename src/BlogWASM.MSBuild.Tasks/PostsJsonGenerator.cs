@@ -9,7 +9,7 @@ namespace BlogWASM.MSBuild.Tasks;
 /// <summary>
 /// It is a MSBuild task to generate a JSON index of blog posts from markdown files with YAML front matter.
 /// </summary>
-public class PostIndexGenerator : Microsoft.Build.Utilities.Task
+public class PostsJsonGenerator : Microsoft.Build.Utilities.Task
 {
     private static readonly JsonSerializerOptions _jsonSerializerOptions = new()
     {

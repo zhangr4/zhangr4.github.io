@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BlogWASM.MSBuild.Tasks\BlogWASM.MSBuild.Tasks.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="wwwroot\Data\youtube.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

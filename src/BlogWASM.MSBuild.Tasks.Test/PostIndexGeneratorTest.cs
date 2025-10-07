@@ -27,7 +27,7 @@ public class PostIndexGeneratorTest
     {
         // Arrange
         var item = new Mock<ITaskItem>();
-        var generator = new PostIndexGenerator
+        var generator = new PostsJsonGenerator
         {
             PostsDirectory = "Posts",
             BuildEngine = buildEngine.Object,
@@ -46,5 +46,10 @@ public class PostIndexGeneratorTest
             testOutput.WriteLine($"[ERROR] {err.Message}");
         }
         Assert.True(result);
+
+        var jsonFilePath = generator.OutputFilePath;
+
+        testOutput.Write(File.ReadAllText(jsonFilePath));
+        Assert.True(File.Exists(jsonFilePath));
     }
 }
